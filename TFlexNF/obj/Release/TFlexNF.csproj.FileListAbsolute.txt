@@ -4,3 +4,5 @@ C:\Program Files\T-FLEX CAD Учебная Версия 15 x64\Program\TFlexNF.t
 F:\GIT\TFlexNF\TFlexNF\obj\Release\TFlexNF.dll
 F:\GIT\TFlexNF\TFlexNF\TFlexNF.tfa
 F:\GIT\TFlexNF\TFlexNF\TFlexNF.dll
+F:\GIT\TFlexNF\TFlexNF\Bin\Release\TFlexNF.tfa
+F:\GIT\TFlexNF\TFlexNF\Bin\Release\TFlexNF.dll

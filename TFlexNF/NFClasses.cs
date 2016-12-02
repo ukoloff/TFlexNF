@@ -175,7 +175,7 @@ namespace TFlexNF
                 int refl = (Item.Reflection == 0 ? this.DefaultReflection : Item.Reflection - 1);
                 int count = (Item.Count == 0 ? this.DefaultItemCount : Item.Count);
 
-                taskfile += String.Format("ITEMFILE:\t{0}.item\n", filePath+item_id);
+                taskfile += String.Format("ITEMFILE:\t{0}.item\n", ".\\"+item_id);
                 taskfile += String.Format("ITEMQUANT:\t{0}\n", count);
                 taskfile += String.Format("ROTATE:\t{0}\n", (rot > 1 ? 1 : rot));
                 taskfile += String.Format("ROTSTEP:\t{0}\n", rotstep);
