@@ -132,7 +132,7 @@ namespace TFlexNF
             base.OnCreateTools();
 
             string icoName = "IcoObject";
-            RegisterCommand((int)Commands.Create, "Создание объекта", LoadIconResource(icoName), LoadIconResource(icoName)); // Регистрируем команду создания
+            RegisterCommand((int)Commands.Create, "$Создание объекта", LoadIconResource(icoName), LoadIconResource(icoName)); // Регистрируем команду создания
 
             //Регистрируем команды контекстного меню объекта
             RegisterObjectCommand((int)ObjectCommands.ObjectContextCommand, "Собрать геометрию...", LoadIconResource("IcoCommand"), LoadIconResource("IcoCommand")); // Регистрируем команду заливки для контекстного меню
@@ -148,8 +148,8 @@ namespace TFlexNF
             TFlex.Application.ActiveMainWindow.InsertPluginSubMenu("Объекты", submenu, MainWindow.InsertMenuPosition.PluginSamples, this);
 
             //Создаём панель с кнопками "Звёзды"
-            int[] cmdIDs = new int[] { (int)Commands.Create };
-            CreateToolbar("Объекты", cmdIDs);
+            int[] cmdIDs = new int[] { (int)Commands.Create, (int)Commands.Start, (int)Commands.Out };
+            CreateToolbar("$Объекты", cmdIDs);
         }
 
 
@@ -165,6 +165,8 @@ namespace TFlexNF
             {
                 default:
                     base.OnCommand(document, id);
+                    break;
+                case Commands.Create:
                     break;
                 case Commands.Start://Команда создания объекта
                     NFGetGeom.Doc = document;
