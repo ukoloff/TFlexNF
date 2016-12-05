@@ -72,7 +72,7 @@ namespace TFlexNF
             browse.Description = "Выберите папку для сохранения задания на раскрой:";
             if (browse.ShowDialog() == DialogResult.OK)
             {
-                task.SaveToItems(browse.SelectedPath);
+                task.SaveToItems(browse.SelectedPath,checkBox2.Checked);
             }
         }
 

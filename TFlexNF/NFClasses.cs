@@ -137,12 +137,19 @@ namespace TFlexNF
             return Items.GetLength(0);
         }
 
-        public void SaveToItems(string filePath)       //Функция для отладки в CatUI
+        public void SaveToItems(string filePath, bool toCatAgent)
         {
             //string filePath = "F:/items/";
             string taskfile = "TASKNAME\tNFTest\nTIMELIMIT:\t3600000\nTASKTYPE:\tSheet\n";
-            taskfile += String.Format("WIDTH:\t{0}\nLENGTH:\t{1}\n", this.ListY, this.ListX);
-            taskfile += "SHEETQUANT:\t1\n";
+            if (toCatAgent)
+            {
+                taskfile += String.Format("DOMAINFILE:\t{0}.item\n", this.Count());
+            } else
+            {
+                taskfile += String.Format("WIDTH:\t{0}\nLENGTH:\t{1}\n", this.ListY, this.ListX);
+            }
+            
+            taskfile += String.Format("SHEETQUANT:\t{0}\n", this.DomainCount);
             taskfile += String.Format("ITEM2DOMAINDIST:\t{0}\n", this.p2l);
             taskfile += String.Format("ITEM2ITEMDIST:\t{0}\n", this.p2p);
 
@@ -175,7 +182,7 @@ namespace TFlexNF
                 int refl = (Item.Reflection == 0 ? this.DefaultReflection : Item.Reflection - 1);
                 int count = (Item.Count == 0 ? this.DefaultItemCount : Item.Count);
 
-                taskfile += String.Format("ITEMFILE:\t{0}.item\n", ".\\"+item_id);
+                taskfile += String.Format("ITEMFILE:\t{0}.item\n", item_id);
                 taskfile += String.Format("ITEMQUANT:\t{0}\n", count);
                 taskfile += String.Format("ROTATE:\t{0}\n", (rot > 1 ? 1 : rot));
                 taskfile += String.Format("ROTSTEP:\t{0}\n", rotstep);
@@ -202,13 +209,29 @@ namespace TFlexNF
                     sw.WriteLine(fileData);
                     sw.Close();
                 }
+            }
 
-                using (StreamWriter sw = File.CreateText(filePath + "NFTest.task"))
+            if (toCatAgent)
+            {
+
+                string DomainData = "ITEMNAME:\tdomain\nVERTQUANT:\t5\nVERTEX:\t0\t0\t0\n";
+                DomainData += string.Format("VERTEX:\t{0}\t0\t0\n", this.ListX);
+                DomainData += string.Format("VERTEX:\t{0}\t{1}\t0\n", this.ListX, this.ListY);
+                DomainData += string.Format("VERTEX:\t0\t{0}\t0\n", this.ListY);
+                DomainData += "VERTEX:\t0\t0\t0\n";
+
+                using (StreamWriter sw = File.CreateText(filePath + this.Count() + ".item"))
                 {
-                    sw.WriteLine(taskfile);
+                    DomainData = DomainData.Replace(",", ".");
+                    sw.WriteLine(DomainData);
                     sw.Close();
                 }
+            }
 
+            using (StreamWriter sw = File.CreateText(filePath + "NFTest.task"))
+            {
+                sw.WriteLine(taskfile);
+                sw.Close();
             }
         }
     }
