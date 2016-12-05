@@ -11,3 +11,4 @@ F:\GIT\TFlexNF\TFlexNF\obj\Debug\TFlexNF.Form1.resources
 F:\GIT\TFlexNF\TFlexNF\obj\Debug\TFlexNF.csproj.GenerateResource.Cache
 F:\GIT\TFlexNF\TFlexNF\obj\Debug\TFlexNF.dll
 F:\GIT\TFlexNF\TFlexNF\obj\Debug\TFlexNF.pdb
+F:\GIT\TFlexNF\TFlexNF\obj\Debug\TFlexNF.NFForm.resources
