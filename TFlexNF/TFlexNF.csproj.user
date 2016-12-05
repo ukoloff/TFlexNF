@@ -4,4 +4,8 @@
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files\T-FLEX CAD Учебная Версия 15 x64\Program\TFlex.exe</StartProgram>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartProgram>C:\Program Files\T-FLEX CAD Учебная Версия 15 x64\Program\TFlex.exe</StartProgram>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
 </Project>
