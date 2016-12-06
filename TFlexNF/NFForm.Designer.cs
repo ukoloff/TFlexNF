@@ -1,4 +1,4 @@
-﻿namespace TFlexNF
+namespace TFlexNF
 {
     partial class NFForm
     {
