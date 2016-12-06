@@ -156,7 +156,7 @@ namespace TFlexNF
 
                 //Задание параметров форме
 
-                label10.Text = "Размер квадрата детали = " + (int)(159 / Scale);
+                label10.Text = "Размеры детали = " + (int)bound.Width + " x " + (int)bound.Height;
                 label9.Text = "Количество контуров: " + select.ContourCount;
 
                 selectComboNum(ref comboBox2, Item.Rotation);
