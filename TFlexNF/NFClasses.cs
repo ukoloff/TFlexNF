@@ -140,7 +140,7 @@ namespace TFlexNF
         public void SaveToItems(string filePath, bool toCatAgent)
         {
             //string filePath = "F:/items/";
-            string taskfile = "TASKNAME\tNFTest\nTIMELIMIT:\t3600000\nTASKTYPE:\tSheet\n";
+            string taskfile = "TASKNAME:\tnest\nTIMELIMIT:\t3600000\nTASKTYPE:\tSheet\n";
             if (toCatAgent)
             {
                 taskfile += String.Format("DOMAINFILE:\t{0}.item\n", this.Count());
@@ -218,7 +218,6 @@ namespace TFlexNF
                 DomainData += string.Format("VERTEX:\t{0}\t0\t0\n", this.ListX);
                 DomainData += string.Format("VERTEX:\t{0}\t{1}\t0\n", this.ListX, this.ListY);
                 DomainData += string.Format("VERTEX:\t0\t{0}\t0\n", this.ListY);
-                DomainData += "VERTEX:\t0\t0\t0\n";
 
                 using (StreamWriter sw = File.CreateText(filePath + this.Count() + ".item"))
                 {
@@ -228,7 +227,7 @@ namespace TFlexNF
                 }
             }
 
-            using (StreamWriter sw = File.CreateText(filePath + "NFTest.task"))
+            using (StreamWriter sw = File.CreateText(filePath + "nest.task"))
             {
                 sw.WriteLine(taskfile);
                 sw.Close();
