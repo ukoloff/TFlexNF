@@ -7,3 +7,4 @@ F:\GIT\TFlexNF\TFlexNF\TFlexNF.dll
 F:\GIT\TFlexNF\TFlexNF\Bin\Release\TFlexNF.tfa
 F:\GIT\TFlexNF\TFlexNF\Bin\Release\TFlexNF.dll
 F:\GIT\TFlexNF\TFlexNF\obj\Release\TFlexNF.NFForm.resources
+F:\GIT\TFlexNF\TFlexNF\obj\Release\TFlexNF.csprojResolveAssemblyReference.cache
