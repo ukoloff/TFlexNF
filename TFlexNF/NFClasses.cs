@@ -214,7 +214,7 @@ namespace TFlexNF
             if (toCatAgent)
             {
 
-                string DomainData = "ITEMNAME:\tdomain\nVERTQUANT:\t5\nVERTEX:\t0\t0\t0\n";
+                string DomainData = "ITEMNAME:\tdomain\nVERTQUANT:\t4\nVERTEX:\t0\t0\t0\n";
                 DomainData += string.Format("VERTEX:\t{0}\t0\t0\n", this.ListX);
                 DomainData += string.Format("VERTEX:\t{0}\t{1}\t0\n", this.ListX, this.ListY);
                 DomainData += string.Format("VERTEX:\t0\t{0}\t0\n", this.ListY);
