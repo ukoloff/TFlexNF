@@ -49,13 +49,16 @@ namespace TFlexNF
                 double* xs = stackalloc double[count+1];
                 double* ys = stackalloc double[count+1];
 
+                List<Point> pts = new List<Point>();
                 for (int i = 0; i < count; i++)
                 {
                     xs[i] = xr[i];
                     ys[i] = yr[i];
+                    pts.Add(new Point(xs[i], ys[i]));
                 }
 
                 cpoly = new PolylineGeometry(count, xs, ys);
+//                cpoly = new PolylineGeometry(pts);
                 PolylineOutline nes = new PolylineOutline(Doc, cpoly);
                 nes.Page = p;
             }
