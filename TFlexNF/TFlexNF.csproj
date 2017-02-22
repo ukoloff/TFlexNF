@@ -47,7 +47,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>C:\Program Files\T-FLEX CAD Учебная Версия 15 x64\Program\</OutputPath>
+    <OutputPath>..\..\..\..\T-FLEX\T-FLEX CAD 15 x64\Program\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>

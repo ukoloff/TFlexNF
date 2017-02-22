@@ -57,8 +57,8 @@ namespace TFlexNF
                     pts.Add(new Point(xs[i], ys[i]));
                 }
 
-                cpoly = new PolylineGeometry(count, xs, ys);
-//                cpoly = new PolylineGeometry(pts);
+//                cpoly = new PolylineGeometry(count, xs, ys);
+                cpoly = new PolylineGeometry(pts);
                 PolylineOutline nes = new PolylineOutline(Doc, cpoly);
                 nes.Page = p;
             }
