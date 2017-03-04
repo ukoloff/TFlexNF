@@ -93,6 +93,8 @@ namespace TFlexNF
                 //Отрисовка превьюшки детали
                 Document Doc = TFlex.Application.ActiveDocument;
                 select = Doc.GetObjectByName(areaName) as Area;
+                Doc.Selection.DeselectAll();
+                Doc.Selection.Select(select);
                 TFlex.Drawing.Rectangle bound = select.BoundRect;
                 double Scale = 159 / Math.Max(bound.Width, bound.Height);
 
