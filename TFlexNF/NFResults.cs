@@ -46,15 +46,15 @@ namespace TFlexNF
 
             unsafe
             {
-                double* xs = stackalloc double[count+1];
-                double* ys = stackalloc double[count+1];
+//                double* xs = stackalloc double[count+1];
+//                double* ys = stackalloc double[count+1];
 
                 List<Point> pts = new List<Point>();
                 for (int i = 0; i < count; i++)
                 {
-                    xs[i] = xr[i];
-                    ys[i] = yr[i];
-                    pts.Add(new Point(xs[i], ys[i]));
+//                    xs[i] = xr[i];
+//                    ys[i] = yr[i];
+                    pts.Add(new Point(xr[i], yr[i]));
                 }
 
 //                cpoly = new PolylineGeometry(count, xs, ys);
@@ -65,8 +65,6 @@ namespace TFlexNF
 
 
         }
-            
-            
                 
         public NFPolyline()
         {
@@ -110,7 +108,7 @@ namespace TFlexNF
 
         protected static void Process(StreamReader filestream)
         {
-            int i = 0;
+            //int i = 0;
             //filestream.ReadLine(); filestream.ReadLine();
             Document Doc = TFlex.Application.ActiveDocument;
             NFGetGeom.Doc = Doc;
