@@ -2,9 +2,9 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>D:\T-FLEX\T-FLEX CAD 15 x64\Program\TFlexCad.exe</StartProgram>
+    <StartProgram>D:\T-Flex\15x64st\Program\TFlexCad.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup>
-    <ReferencePath>D:\T-FLEX\T-FLEX CAD 15 x64\Program\</ReferencePath>
+    <ReferencePath>D:\T-Flex\15x64st\Program\</ReferencePath>
   </PropertyGroup>
 </Project>
